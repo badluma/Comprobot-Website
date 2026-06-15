@@ -40,6 +40,7 @@ jobs:
             - name: Copy SEO files and static assets
               run: |
                   cp robots.txt sitemap.xml dist/
+                  cp install.sh install.ps1 dist/
                   cp -r assets dist/assets
 
             - name: Upload artifact
