@@ -37,6 +37,11 @@ jobs:
             - name: Build
               run: bun build ./index.html --outdir dist
 
+            - name: Copy SEO files and static assets
+              run: |
+                  cp robots.txt sitemap.xml dist/
+                  cp -r assets dist/assets
+
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:

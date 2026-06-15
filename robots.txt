@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://badluma.github.io/Comprobot-Website/sitemap.xml
