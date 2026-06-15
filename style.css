@@ -1,0 +1,465 @@
+html {
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+
+    /* Hide scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.heading {
+    color: white;
+    margin: 0 0 12px;
+}
+
+.subheading {
+    color: white;
+    margin: 0 0 8px;
+}
+
+.text {
+    color: white;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+.text-muted {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    padding: 40px 24px;
+    box-sizing: border-box;
+}
+
+.title {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    scroll-snap-align: start;
+    padding: 40px 24px;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 100%;
+    max-width: 1344px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---------- Hero ---------- */
+.hero-logo {
+    filter: brightness(0) invert(1);
+}
+
+.hero-heading {
+    font-size: 3.5rem;
+    letter-spacing: -0.02em;
+    margin-top: 16px;
+}
+
+.hero-text {
+    max-width: 620px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ---------- Code block ---------- */
+.code-block {
+    margin: 28px auto 0;
+    width: 100%;
+    max-width: 440px;
+    text-align: left;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #0a0a0a;
+}
+
+.code-block-sm {
+    margin: 16px 0 0;
+    max-width: 360px;
+}
+
+.code-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-bottom: 1px solid #333;
+    background: #111;
+}
+
+.code-label {
+    color: #888;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.copy-button {
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.copy-button.copied {
+    background: white;
+    color: black;
+}
+
+.code-pre {
+    margin: 0;
+    padding: 14px 16px;
+    overflow-x: auto;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.9rem;
+    color: white;
+    line-height: 1.6;
+}
+
+.code-prompt {
+    color: #666;
+    user-select: none;
+    margin-right: 8px;
+}
+
+code {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* ---------- Sections with image ---------- */
+.section-with-image {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: nowrap;
+}
+
+.section-text {
+    flex: 0 0 380px;
+    max-width: 380px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.feature-list li {
+    padding: 6px 0;
+    color: #ccc;
+}
+
+.feature-list strong {
+    color: white;
+}
+
+/* ---------- Dashboard image ---------- */
+/* Bigger/smaller dashboard image: change this flex-grow number.
+   Higher = bigger image. To shrink the text column instead, edit
+   `.section-text { flex-basis }` above. */
+.dashboard-image {
+    flex: 1 1 0;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    border-radius: 14px;
+    display: block;
+}
+
+/* ---------- Feature grid ---------- */
+.center-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 32px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+    max-width: 760px;
+}
+
+.feature-cell {
+    border: 1px solid #222;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.feature-cell .text {
+    color: #aaa;
+}
+
+.cta-row {
+    margin-top: 32px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ---------- Comparison table ---------- */
+.comparison-intro {
+    max-width: 640px;
+    text-align: center;
+    color: #aaa;
+    margin: 0 auto 32px;
+}
+
+.comparison-wrap {
+    width: 100%;
+    max-width: 860px;
+    overflow: visible;
+}
+
+.comparison-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    color: white;
+    font-size: 0.95rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 12px 16px;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .comparison-table {
+        font-size: 0.8rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 8px 6px;
+    }
+}
+
+.comparison-table thead th {
+    color: #888;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+}
+
+.comparison-table thead th:first-child {
+    text-align: left;
+}
+
+.comparison-table tbody th[scope="row"] {
+    text-align: left;
+    font-weight: 500;
+    color: #ddd;
+}
+
+.comparison-table .yes {
+    color: white;
+    font-weight: 700;
+}
+
+.comparison-table .no {
+    color: #555;
+}
+
+.comparison-table .partial {
+    color: #999;
+    font-weight: 700;
+}
+
+/* Partial cell with hover tooltip + info icon */
+.partial-mark {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+}
+
+.partial-mark .info-icon {
+    position: absolute;
+    top: -0.6em;
+    left: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    margin-left: 1px;
+    border-radius: 50%;
+    border: 1px solid #777;
+    color: #aaa;
+    font-size: 7px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1;
+    transition:
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.partial-mark:hover .info-icon,
+.partial-mark:focus .info-icon {
+    color: white;
+    border-color: white;
+}
+
+.partial-mark::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 220px;
+    padding: 8px 10px;
+    background: black;
+    color: #eee;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+    white-space: normal;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.partial-mark::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% + 3px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #444;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease;
+    z-index: 10;
+}
+
+.partial-mark:hover::after,
+.partial-mark:focus::after,
+.partial-mark:hover::before,
+.partial-mark:focus::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.comparison-table thead th.comparison-own {
+    color: white;
+}
+
+/* ---------- Buttons ---------- */
+.button {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: opacity 0.15s ease;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+.button-outline {
+    background: transparent;
+    color: white;
+    border: 1px solid #555;
+}
+
+.button-outline:hover {
+    border-color: white;
+    opacity: 1;
+}
+
+/* ---------- Scroll hint ---------- */
+.bottom {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+    filter: brightness(0) invert(1);
+}
+
+.bottom.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+    .hero-heading {
+        font-size: 2.4rem;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    .section-with-image {
+        flex-wrap: wrap;
+        gap: 28px;
+    }
+    .section-text {
+        flex-basis: auto;
+        max-width: 440px;
+    }
+}

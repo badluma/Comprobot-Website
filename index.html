@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Comprobot</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Comprobot — a highly customizable, self-hostable open-source Discord bot."
+        />
+        <link rel="icon" href="/assets/comprobot.svg" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="body">
+        <!-- 1. Hero -->
+        <section class="title" id="heading">
+            <div class="content">
+                <img
+                    src="/assets/comprobot.svg"
+                    width="140"
+                    height="140"
+                    alt="Comprobot logo"
+                    class="hero-logo"
+                />
+                <h1 class="heading hero-heading">Comprobot</h1>
+                <p class="text hero-text">
+                    A highly customizable, self-hostable open-source Discord bot
+                    designed to be truly yours. Customize everything, bring your
+                    own AI models and be in control using the dashboard, all
+                    without writing any code.
+                </p>
+
+                <div class="code-block" id="install-block">
+                    <div class="code-bar">
+                        <span class="code-label">install</span>
+                        <button
+                            class="copy-button"
+                            data-copy="pipx install comprobot
+comprobot onboard"
+                        >
+                            Copy
+                        </button>
+                    </div>
+                    <pre
+                        class="code-pre"
+                    ><code><span class="code-prompt">$</span> pipx install comprobot
+<span class="code-prompt">$</span> comprobot onboard</code></pre>
+                </div>
+
+                <div class="hero-buttons">
+                    <a
+                        href="https://badluma.github.io/Comprobot-Docs/Installation"
+                        class="button"
+                    >
+                        Get started
+                    </a>
+                    <a
+                        href="https://github.com/badluma/Comprobot"
+                        class="button button-outline"
+                    >
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Dashboard -->
+        <section class="section" id="dashboard">
+            <div class="content section-with-image">
+                <img
+                    src="/assets/dashboard.png"
+                    alt="Comprobot Dashboard"
+                    class="dashboard-image"
+                />
+
+                <div class="section-text">
+                    <h2 class="heading">A dashboard, not a config file</h2>
+                    <p class="text">
+                        Run the web dashboard alongside the bot and manage
+                        everything from the browser. No need to manually edit
+                        configuration files.
+                    </p>
+                    <ul class="text feature-list">
+                        <li>
+                            <strong>Self-hosters</strong><br />
+                            You host the bot on your own server. You are in full
+                            control, no data is stored externally.
+                        </li>
+                        <li>
+                            <strong>Tinkerers</strong><br />
+                            You can customize everything about the bot, with or
+                            without touching the code. The choice is yours.
+                        </li>
+                        <li>
+                            <strong>Community servers</strong><br />
+                            Comprobot is made to adapt to your community's
+                            needs. That can be simple moderation, games or AI
+                            assistance. You can activate whatever you need.
+                        </li>
+                        <li>
+                            <strong>Non-coders</strong><br />
+                            The all new dashboard makes it easy for everyone to
+                            have full control over your bot without writing any
+                            code or having to use the terminal the entire time.
+                        </li>
+                    </ul>
+                    <div class="code-block code-block-sm">
+                        <div class="code-bar">
+                            <span class="code-label">dashboard</span>
+                            <button
+                                class="copy-button"
+                                data-copy="bunx comprobot-dashboard"
+                            >
+                                Copy
+                            </button>
+                        </div>
+                        <pre
+                            class="code-pre"
+                        ><code><span class="code-prompt">$</span> bunx comprobot-dashboard</code></pre>
+                    </div>
+                    <p class="text text-muted">
+                        Opens at <code>localhost:7626</code>. Requires Comprobot
+                        installed and onboarded.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Comparison -->
+        <section class="section" id="comparison">
+            <div class="content">
+                <h2 class="heading center-heading">How Comprobot compares</h2>
+                <p class="text comparison-intro">
+                    Most popular Discord bots lock their best features behind a
+                    paywall or a hosted account. Comprobot gives you everything,
+                    on your own server.
+                </p>
+                <div class="comparison-wrap">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Feature</th>
+                                <th scope="col">MEE6</th>
+                                <th scope="col">Dyno</th>
+                                <th scope="col">Carl-bot</th>
+                                <th scope="col" class="comparison-own">
+                                    Comprobot
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Self-hostable</th>
+                                <td class="no">✕</td>
+                                <td class="no">✕</td>
+                                <td class="no">✕</td>
+                                <td class="yes comparison-own">✓</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Open source</th>
+                                <td class="no">✕</td>
+                                <td class="no">✕</td>
+                                <td class="no">✕</td>
+                                <td class="yes comparison-own">✓</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Easy installation</th>
+                                <td class="yes">✓</td>
+                                <td class="yes">✓</td>
+                                <td class="yes">✓</td>
+                                <td class="partial comparison-own">
+                                    <span
+                                        class="partial-mark"
+                                        tabindex="0"
+                                        data-tooltip="Requires a simple installation and onboarding instead of just a link to click"
+                                        >–<span
+                                            class="info-icon"
+                                            aria-hidden="true"
+                                            >i</span
+                                        ></span
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Always online</th>
+                                <td class="yes">✓</td>
+                                <td class="yes">✓</td>
+                                <td class="yes">✓</td>
+                                <td class="partial comparison-own">
+                                    <span
+                                        class="partial-mark"
+                                        tabindex="0"
+                                        data-tooltip="Uptime depends on your own host being online."
+                                        >–<span
+                                            class="info-icon"
+                                            aria-hidden="true"
+                                            >i</span
+                                        ></span
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">No paywalled features</th>
+                                <td class="no">✕</td>
+                                <td class="no">✕</td>
+                                <td class="partial">
+                                    <span
+                                        class="partial-mark"
+                                        tabindex="0"
+                                        data-tooltip="Most features are free, but some are gated behind premium."
+                                        >–<span
+                                            class="info-icon"
+                                            aria-hidden="true"
+                                            >i</span
+                                        ></span
+                                    >
+                                </td>
+                                <td class="yes comparison-own">✓</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bring your own AI model</th>
+                                <td class="no">✕</td>
+                                <td class="no">✕</td>
+                                <td class="no">✕</td>
+                                <td class="yes comparison-own">✓</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">AI fully optional</th>
+                                <td class="no">✕</td>
+                                <td class="no">✕</td>
+                                <td class="no">✕</td>
+                                <td class="yes comparison-own">✓</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">No data collection</th>
+                                <td class="no">✕</td>
+                                <td class="no">✕</td>
+                                <td class="no">✕</td>
+                                <td class="yes comparison-own">✓</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Web dashboard</th>
+                                <td class="yes">✓</td>
+                                <td class="yes">✓</td>
+                                <td class="yes">✓</td>
+                                <td class="yes comparison-own">✓</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Customizable output &amp; messages
+                                </th>
+                                <td class="partial">
+                                    <span
+                                        class="partial-mark"
+                                        tabindex="0"
+                                        data-tooltip="Limited templates with little control over wording."
+                                        >–<span
+                                            class="info-icon"
+                                            aria-hidden="true"
+                                            >i</span
+                                        ></span
+                                    >
+                                </td>
+                                <td class="partial">
+                                    <span
+                                        class="partial-mark"
+                                        tabindex="0"
+                                        data-tooltip="Limited templates with little control over wording."
+                                        >–<span
+                                            class="info-icon"
+                                            aria-hidden="true"
+                                            >i</span
+                                        ></span
+                                    >
+                                </td>
+                                <td class="partial">
+                                    <span
+                                        class="partial-mark"
+                                        tabindex="0"
+                                        data-tooltip="Limited templates with little control over wording."
+                                        >–<span
+                                            class="info-icon"
+                                            aria-hidden="true"
+                                            >i</span
+                                        ></span
+                                    >
+                                </td>
+                                <td class="yes comparison-own">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Features -->
+        <section class="section" id="features">
+            <div class="content">
+                <h2 class="heading center-heading">Built to be customized</h2>
+                <div class="feature-grid">
+                    <div class="feature-cell">
+                        <h3 class="subheading">Customizability</h3>
+                        <p class="text">
+                            Comprobot is designed to be truly yours. You can
+                            customize basically everything, from the output
+                            format to the error messages to the AI system
+                            prompt, everything is adaptable.
+                        </p>
+                    </div>
+                    <div class="feature-cell">
+                        <h3 class="subheading">
+                            Bring your own AI or turn it off
+                        </h3>
+                        <p class="text">
+                            Most companies just force AI down your throat
+                            without letting you turn it off. In Comprobot, you
+                            can disable AI entirely by toggling one switch. You
+                            can also bring your own AI model.
+                        </p>
+                    </div>
+                    <div class="feature-cell">
+                        <h3 class="subheading">Self-hosted</h3>
+                        <p class="text">
+                            MIT-licensed and yours to run. No accounts, no
+                            telemetry, no data collection or anything else.
+                            Everything is open source and yours to modify.
+                        </p>
+                    </div>
+                    <div class="feature-cell">
+                        <h3 class="subheading">Installs anywhere</h3>
+                        <p class="text">
+                            Comprobot is available on basically any modern
+                            package manager, including pipx, APT, AUR, Homebrew,
+                            Winget, Scoop or Docker.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cta-row">
+                    <a
+                        href="https://badluma.github.io/Comprobot-Docs/Installation"
+                        class="button"
+                    >
+                        Documentation
+                    </a>
+                    <a
+                        href="https://github.com/badluma/Comprobot"
+                        class="button button-outline"
+                    >
+                        GitHub
+                    </a>
+                    <a
+                        href="https://discord.gg/9M2agkVKun"
+                        class="button button-outline"
+                    >
+                        Discord
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <img
+            class="bottom"
+            id="scroll-hint"
+            src="/assets/scroll-down.svg"
+            alt="Scroll down"
+        />
+        <script type="module" src="./app.ts"></script>
+    </body>
+</html>
