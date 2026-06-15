@@ -101,13 +101,13 @@ install_dashboard() {
   fi
 
   tmp="$(mktemp -d)"
-  trap 'rm -rf "$tmp"' RETURN
   curl -fsSL "$url" | tar -xz -C "$tmp"
 
   mkdir -p "$DATA_DIR"
   rm -rf "$DATA_DIR/dashboard"
   # the tarball extracts to a single top-level dir (repo-tag/)
   mv "$tmp"/*/ "$DATA_DIR/dashboard"
+  rm -rf "$tmp"
 }
 
 main() {
