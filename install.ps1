@@ -44,12 +44,22 @@ uv tool install --force comprobot
 Ensure-Path
 
 # --- 4. resolve the dashboard version ----------------------------------------
+# Tags are v-prefixed (v1.0.2); the GitHub archive URL must match exactly.
+function Normalize-Tag($v) {
+    if (-not $v) { return $null }
+    if ($v -like 'v*') { return $v }
+    return "v$v"
+}
+
 $Ver = (& comprobot --dashboard-version) 2>$null
 if (-not $Ver) {
+    # Bot didn't pin one — fall back to the latest git tag. (Tags always exist;
+    # GitHub Releases may not, so we don't rely on /releases/latest.)
     try {
-        $Ver = (Invoke-RestMethod "https://api.github.com/repos/$DashboardRepo/releases/latest").tag_name
+        $Ver = (Invoke-RestMethod "https://api.github.com/repos/$DashboardRepo/tags")[0].name
     } catch { $Ver = $null }
 }
+$Ver = Normalize-Tag $Ver
 
 # --- 5. download + unpack the dashboard --------------------------------------
 if ($Ver) {

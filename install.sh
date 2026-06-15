@@ -64,17 +64,28 @@ install_bot() {
 }
 
 # --- 4. resolve which dashboard version this bot wants -----------------------
+# Tags are v-prefixed (v1.0.2); the GitHub archive URL must match exactly.
+# Normalise so a bare "1.0.2" still resolves.
+normalize_tag() {
+  case "$1" in
+    v*) printf '%s' "$1" ;;
+    ?*) printf 'v%s' "$1" ;;
+    *)  printf '' ;;
+  esac
+}
+
 resolve_dashboard_version() {
   local ver
   ver="$(comprobot --dashboard-version 2>/dev/null || true)"
   if [ -n "$ver" ]; then
-    printf '%s' "$ver"
+    normalize_tag "$ver"
     return
   fi
-  # Bot didn't pin one — fall back to the latest published release.
-  ver="$(curl -fsSL "https://api.github.com/repos/${DASHBOARD_REPO}/releases/latest" \
-          | grep -m1 '"tag_name"' | cut -d'"' -f4 || true)"
-  printf '%s' "$ver"
+  # Bot didn't pin one — fall back to the latest git tag. (Tags always exist;
+  # GitHub Releases may not, so we don't rely on /releases/latest.)
+  ver="$(curl -fsSL "https://api.github.com/repos/${DASHBOARD_REPO}/tags" \
+          | grep -m1 '"name"' | cut -d'"' -f4 || true)"
+  normalize_tag "$ver"
 }
 
 # --- 5. download + unpack the dashboard into the data dir --------------------
